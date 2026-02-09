@@ -1,0 +1,21 @@
+{
+  "benefits": [
+    {
+      "name": "UX-исследования",
+      "image": "ux-research.svg"
+    },
+    {
+      "name": "UI-дизайн",
+      "image": "ui-design.svg"
+    },
+    {
+      "name": "Веб-разработка",
+      "image": "web-development.svg"
+    },
+    {
+      "name": "Мобильные интерфейсы",
+      "image": "mobile.svg"
+    }
+  ]
+
+}

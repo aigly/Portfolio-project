@@ -1,0 +1,84 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(26, 26, 26);
+
+    z-index: 10;
+}
+
+.topBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* больше отступы от краёв */
+}
+
+.logo {
+    display: flex;
+    color: white;
+    margin-left: 100px;
+    font-size: clamp(16px, 4vw, 20px);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin-left: 0;
+        font-size: clamp(14px, 4vw, 18px);
+    }
+    
+    .topBar {
+        padding: 12px 20px;
+    }
+}
+.burger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    z-index: 1100;
+}
+.navLinks {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0 15px 0;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: white;
+
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.navLinks a:hover {
+    background-color: #3b3b3b;
+}
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    .navLinks {
+        position: fixed;
+        inset: 0; /* top:0 right:0 bottom:0 left:0 */
+        background: rgb(26, 26, 26);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        font-size: 22px;
+        display: none;
+        animation: fadeIn 0.3s ease forwards;
+    }
+
+    .active {
+        display: flex;
+    }
+}
+

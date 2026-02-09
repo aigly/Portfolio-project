@@ -1,0 +1,77 @@
+.header{
+text-align: center;
+}
+.skillCard{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    background-color: #363636;
+    border-radius: 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.skillCard img{
+    width: 70%;
+    height: 70%;
+    border-radius: 35px;
+}
+.skillCard:hover{
+    background: #2c2c2c;
+    box-shadow: 0 0 25px rgba(76, 111, 255, 0.4);
+    transform: scale(1.1);
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 25px;
+    margin: 25px;
+    justify-items: center;
+}
+
+
+.header.white,
+.headerS.white{
+    color: black;
+}
+.skillCard.white{
+    background: #b4b4b4;
+}
+/* Ховер для светлой карточки, чтобы она не становилась почти чёрной */
+.skillCard.white:hover{
+    background: #808080;
+    box-shadow: 0 0 25px rgba(76, 111, 255, 0.3);
+}
+@media (max-width: 768px) {
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 20px;
+        margin: 20px;
+    }
+    
+    .skillCard {
+        width: 100%;
+        max-width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        margin: 15px;
+    }
+
+    .skillCard {
+        width: 100%;
+        max-width: 160px;
+        height: 220px;
+        font-size: 16px;
+        padding: 12px;
+    }
+    
+    .header {
+        font-size: clamp(20px, 6vw, 28px);
+    }
+}
+
