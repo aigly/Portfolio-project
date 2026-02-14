@@ -21,12 +21,12 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
-
-      - run: npm run build
+      - run: cd Portfolio && npm ci
+      - run: cd Portfolio && npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: Portfolio/dist
+
 
       - uses: actions/deploy-pages@v4
