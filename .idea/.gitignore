@@ -8,17 +8,17 @@
 /dataSources.local.xml
 
 # Node.js modules
-node_modules/
+/node_modules/
 
 # Build output
-dist/
-build/
+/dist/
+/build/
 
 # Python virtual environment
-venv/
+/.venv/
 
 # Log files
-*.log
+/*.log
 
 # Temporary files
-*.tmp
+*/.tmp
