@@ -2,7 +2,7 @@ name: Portfolio projects
 
 on:
   push:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   deploy:
@@ -19,14 +19,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
-      - run: cd Portfolio && npm ci
-      - run: cd Portfolio && npm run build
+      - name: Install
+        working-directory: Portfolio
+        run: npm ci
+
+      - name: Build
+        working-directory: Portfolio
+        run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
           path: Portfolio/dist
 
-
       - uses: actions/deploy-pages@v4
+
